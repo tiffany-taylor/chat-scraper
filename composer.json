@@ -1,8 +1,12 @@
 {
+  "autoload": {
+    "psr-4": {
+      "ChatScraper\\": "src/"
+    }
+  },
   "require": {
-    "symfony/dom-crawler": "6.1.*"
-  }
-  ,
+    "guzzlehttp/guzzle": "^7.0"
+  },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   }
