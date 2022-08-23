@@ -8,9 +8,11 @@
  * will send request to capture json payload
  */
 
-namespace ChatScraper\Scanner;
+namespace ChatScraper\Retriever;
 
 use GuzzleHttp\Client;
+
+include(__DIR__ . '/../../config.php');
 
 class Message
 {
@@ -30,16 +32,14 @@ class Message
             [
                 'query' => [
                     'since' => Config::SINCE,
+                    //'before' => '55110732',
                     'mode' => Config::MODE,
-                    'msgCount' => Config::MESSAGE_COUNT
+                    'msgCount' => Config::MESSAGE_COUNT,
+                    'fkey' => USER_FKEY,
                 ]
             ],
         );
 
-        return json_decode($response->getBody()->getContents(), true);
+         return json_decode($response->getBody()->getContents(), true);
     }
-
-
-
-
 }
