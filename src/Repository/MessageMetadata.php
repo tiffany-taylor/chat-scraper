@@ -2,15 +2,11 @@
 
 namespace ChatScraper\Repository;
 
-readonly class ChatMessage
+readonly class MessageMetadata
 {
     public function __construct(
-        public int $timestamp,
-        public string $content,
-        public int $userId,
-        public string $username,
-        public int $roomId,
         public int $messageId,
+        public string $content,
         public int $amountOfEdits,
         public int $parentId,
         public bool $isReply,
