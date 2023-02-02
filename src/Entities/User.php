@@ -1,6 +1,6 @@
 <?php
 
-namespace ChatScraper\Repository;
+namespace ChatScraper\Entities;
 
 class User
 {
