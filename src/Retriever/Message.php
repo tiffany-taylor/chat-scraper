@@ -24,7 +24,7 @@ class Message
         $this->httpClient = new Client();
     }
 
-    public function checkForMessages(): array
+    public function checkForMessages(int $amountOfMessagesToCheck = 5): array
     {
         $response = $this->httpClient->request(
             'POST',
@@ -34,7 +34,7 @@ class Message
                     'since' => Config::SINCE,
                     //'before' => '55110732',
                     'mode' => Config::MODE,
-                    'msgCount' => Config::MESSAGE_COUNT,
+                    'msgCount' => $amountOfMessagesToCheck,
                     'fkey' => USER_FKEY,
                 ]
             ],
