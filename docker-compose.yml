@@ -1,0 +1,9 @@
+version: "3"
+services:
+  db:
+    build: ./db
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: room11
+    ports:
+      - "33060:3306"
