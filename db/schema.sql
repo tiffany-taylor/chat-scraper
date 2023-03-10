@@ -1,3 +1,8 @@
+CREATE TABLE users (
+     userId INT NOT NULL,
+     username VARCHAR(40) NOT NULL,
+     PRIMARY KEY (userId)
+);
 CREATE TABLE messages (
       messageId INT NOT NULL,
       content MEDIUMTEXT NOT NULL,
@@ -12,10 +17,4 @@ CREATE TABLE messages (
       userId INT NOT NULL,
       PRIMARY KEY (messageId),
       FOREIGN KEY (userId) REFERENCES users(userId)
-);
-
-CREATE TABLE users (
-       userId INT NOT NULL,
-       username VARCHAR(40) NOT NULL,
-       PRIMARY KEY (userId)
 );
