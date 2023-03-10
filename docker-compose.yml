@@ -2,6 +2,7 @@ version: "3"
 services:
   db:
     build: ./db
+    container_name: chatscraper_mysql
     environment:
       MYSQL_DATABASE: app
       MYSQL_ROOT_PASSWORD: room11
