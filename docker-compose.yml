@@ -1,10 +1,11 @@
-version: "3"
+version: "3.8"
 services:
   db:
-    build: ./db
-    container_name: chatscraper_mysql
+    image: mysql/mysql-server:8.0.32
     environment:
-      MYSQL_DATABASE: app
-      MYSQL_ROOT_PASSWORD: room11
+      - MYSQL_DATABASE=app
+      - MYSQL_ROOT_PASSWORD=supersecret
+      - MYSQL_USER=room11
+      - MYSQL_PASSWORD=secret
     ports:
       - "33060:3306"
