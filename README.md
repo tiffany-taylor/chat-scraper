@@ -13,3 +13,4 @@ The `config.project.php` file will contain a StackOverflow user token that is us
   - allow swapping with another database
 - pagination of message payload
 - async calling of messages?
+- example file for environment variables
