@@ -8,3 +8,8 @@ services:
       - MYSQL_PASSWORD=room11
     ports:
       - "33060:3306"
+    build:
+      context: containers/chatscraper_mysql
+      dockerfile: Dockerfile
+    #volumes:
+    #  - ./containers/chatscraper_mysql/db:/var/lib/mysql
