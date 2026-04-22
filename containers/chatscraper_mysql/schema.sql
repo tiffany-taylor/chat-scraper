@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS chat;
+CREATE DATABASE chat;
+USE chat;
 CREATE TABLE users (
      userId INT NOT NULL,
      username VARCHAR(40) NOT NULL,
