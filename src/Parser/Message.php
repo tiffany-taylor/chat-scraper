@@ -17,7 +17,7 @@ class Message
     {
     }
 
-    public function parse()
+    public function parse(): array
     {
         $messagesInMemory = [];
         foreach ($this->messages['events'] as $message) {
